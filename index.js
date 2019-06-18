@@ -17,13 +17,12 @@ $(function handleSubmit() {
     })
 });
 $(function handleCheckButton() {
-    $('.shopping-item-toggle').click( e => {
-        console.log($(e.currentTarget).closest('span'));
+    $('.shopping-list').on('click', '.shopping-item-toggle', e => {
         $(e.currentTarget).parents().siblings('span').toggleClass('shopping-item__checked');
     })
 })
 $(function handleDeleteButton() {
-    $('.shopping-item-delete').click(e => {
+    $('.shopping-list').on('click', '.shopping-item-delete', e => {
         $(e.currentTarget).closest('li').remove();
     });
 });
