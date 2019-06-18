@@ -16,9 +16,14 @@ $(function handleSubmit() {
         </li>`)
     })
 });
+$(function handleCheckButton() {
+    $('.shopping-item-toggle').click( e => {
+        console.log($(e.currentTarget).closest('span'));
+        $(e.currentTarget).parents().siblings('span').toggleClass('shopping-item__checked');
+    })
+})
 $(function handleDeleteButton() {
     $('.shopping-item-delete').click(e => {
-        console.log($(e.currentTarget).closest('.shopping-item'));
         $(e.currentTarget).closest('li').remove();
     });
 });
