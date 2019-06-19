@@ -2,6 +2,7 @@ $(function handleSubmit() {
     $('#js-shopping-list-form').submit(e => {
         e.preventDefault();
         const listItem = $('#shopping-list-entry').val();
+        $('#shopping-list-entry').val('');
         $('.shopping-list').append(`
         <li>
             <span class="shopping-item">${listItem}</span>
@@ -13,7 +14,7 @@ $(function handleSubmit() {
                     <span class="button-label">delete</span>
                 </button>
             </div>
-        </li>`)
+        </li>`);
     })
 });
 $(function handleCheckButton() {
